@@ -1,0 +1,35 @@
+body {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s;
+}
+
+#task-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.list-group-item {
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+#pomodoro-timer {
+    font-size: 3rem;
+    font-family: monospace;
+    transition: color 0.3s;
+}
+
+#pomodoro-timer.break {
+    color: #28a745; /* Verde para pausa */
+}
+
+.btn {
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
