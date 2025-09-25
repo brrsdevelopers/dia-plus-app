@@ -1,28 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row">
-    <!-- To-Do List -->
-    <div class="col-md-6">
-        <h3>Lista de Tarefas</h3>
-        <form id="task-form" class="mb-3">
-            <div class="input-group">
-                <input type="text" id="task-input" class="form-control" placeholder="Nova tarefa" maxlength="100" required>
-                <button type="submit" class="btn btn-primary">Adicionar</button>
-            </div>
-        </form>
-        <ul id="task-list" class="list-group"></ul>
-    </div>
-
-    <!-- Pomodoro -->
-    <div class="col-md-6">
-        <h3>Pomodoro</h3>
-        <div class="text-center">
-            <h2 id="pomodoro-timer" class="text-primary">25:00</h2>
-            <p id="pomodoro-status">Modo: Trabalho</p>
-            <button id="start-pomodoro" class="btn btn-primary">Iniciar</button>
-            <button id="reset-pomodoro" class="btn btn-secondary">Reiniciar</button>
+<div id="tasks-section" class="section">
+    <h3>Lista de Tarefas</h3>
+    <form id="task-form" class="mb-3">
+        <div class="input-group">
+            <input type="text" id="task-input" class="form-control" placeholder="Nova tarefa" maxlength="100" required>
+            <button type="submit" class="btn btn-primary">Adicionar</button>
         </div>
+    </form>
+    <ul id="task-list" class="list-group"></ul>
+</div>
+
+<div id="pomodoro-section" class="section" style="display: none;">
+    <h3>Pomodoro</h3>
+    <div class="text-center">
+        <h2 id="pomodoro-timer" class="text-primary">25:00</h2>
+        <p id="pomodoro-status">Modo: Trabalho</p>
+        <button id="start-pomodoro" class="btn btn-primary">Iniciar</button>
+        <button id="reset-pomodoro" class="btn btn-secondary">Reiniciar</button>
     </div>
 </div>
-{% endblock %}  
+{% endblock %}

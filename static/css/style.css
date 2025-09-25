@@ -1,6 +1,8 @@
 body {
     background-color: #f8f9fa;
     transition: background-color 0.3s;
+    padding-top: 70px; /* Espaço para o navbar fixo */
+    padding-bottom: 70px; /* Espaço para a barra inferior fixa */
 }
 
 #task-list {
@@ -32,4 +34,39 @@ body {
 
 .btn:hover {
     transform: scale(1.05);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fixed-bottom {
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.section-toggle {
+    min-width: 120px;
+}
+
+.section-toggle.active {
+    background-color: #007bff !important;
+    color: white !important;
+    border-color: #007bff !important;
+}
+
+.section {
+    transition: opacity 0.3s ease;
+}
+
+.section:not([style*="display: none"]) {
+    opacity: 1;
+}
+
+.section[style*="display: none"] {
+    opacity: 0;
 }
